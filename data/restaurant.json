@@ -1,14 +1,23 @@
-[
-    {
-        "name": "Momo Paradise",
-        "qrcode": null,
-        "url": null,
-        "baihuo": "遠百"
-    },
-    {
-        "name": null,
-        "qrcode": null,
-        "url": null,
-        "baihuo": "巨城"
-    }
-]
+{
+    "restaurants": 
+    [
+        {
+            "name": "Momo Paradise",
+            "qrcode": "/images/restaurantQrcode/momoParadise.heic",
+            "url": "try.com",
+            "baihuo": "遠百"
+        },
+        {
+            "name": "燒肉smile",
+            "qrcode": "/images/restaurantQrcode/shaorousmille.heic",
+            "url": "https://inline.app/-N0o-U9whogzEqnGTMEk:inline-live-2/-NGufvH1aBRQ3YiBZ6tg/waiting",
+            "baihuo": "享平方"
+        },
+        {
+            "name": "巨城餐廳",
+            "qrcode": null,
+            "url": null,
+            "baihuo": "巨城"
+        }
+    ]
+}

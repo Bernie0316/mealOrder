@@ -18,6 +18,12 @@
             "qrcode": null,
             "url": null,
             "baihuo": "巨城"
+        },
+        {
+            "name": "其他餐廳",
+            "qrcode": null,
+            "url": null,
+            "baihuo": "其他"
         }
     ]
 }

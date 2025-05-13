@@ -2,14 +2,32 @@ const url = "../data/restaurant.json";
 const cards = document.querySelector('#cards')
 
 const all = document.querySelector('#all');
-const yuanbai = document.querySelector('#yuanbai');
-const jucheng = document.querySelector('#jucheng');
+const yuanBai = document.querySelector('#yuanBai');
+const juCheng = document.querySelector('#juCheng');
+const xiangPingFang = document.querySelector('#xiangPingFang');
+const other = document.querySelector('#other');
 
-async function getRestaurantData() {
+async function getRestaurantData(filter = "all") {
     const response = await fetch(url);
     const data = await response.json();
     let restaurants = data.restaurants;
 
+    switch (filter) {
+        case "yuanBai":
+            restaurants = restaurants.filter((restaurant) => restaurant.baihuo === "遠百");
+            break;
+        case "juCheng":
+            restaurants = restaurants.filter((restaurant) => restaurant.baihuo === "巨城");
+            break;
+        case "xiangPingFang":
+            restaurants = restaurants.filter((restaurant) => restaurant.baihuo === "享平方");
+            break;
+        case "other":
+            restaurants = restaurants.filter((restaurant) => restaurant.baihuo === "其他");
+            break;        
+        default:
+            break;
+    }
     console.table(restaurants);
     displayRestaurant(restaurants)
 }
@@ -46,3 +64,34 @@ const displayRestaurant = (restaurants) => {
 }
 
 getRestaurantData();
+
+all.addEventListener('click', () => {
+    clearButtonClasses();
+    getRestaurantData('all');
+    utah.classList.add('active');
+})
+yuanBai.addEventListener('click', () =>{
+    clearButtonClasses();
+    getRestaurantData('yuanBai');
+    nonus.classList.add('active');
+})
+juCheng.addEventListener('click', () =>{
+    clearButtonClasses();
+    getRestaurantData('juCheng');
+    nonus.classList.add('active');
+})
+xiangPingFang.addEventListener('click', () =>{
+    clearButtonClasses();
+    getRestaurantData('xiangPingFang');
+    nonus.classList.add('active');
+})
+other.addEventListener('click', () =>{
+    clearButtonClasses();
+    getRestaurantData('other');
+    nonus.classList.add('active');
+})
+
+function clearButtonClasses() {
+    const filterButtons = document.querySelectorAll('button');
+    filterButtons.forEach(button => button.className="");
+}

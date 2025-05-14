@@ -1,4 +1,4 @@
-const url = "../data/restaurant.json";
+const url = "https://github.com/Bernie0316/mealOrder/blob/main/data/restaurant.json";
 const cards = document.querySelector('#cards')
 
 const all = document.querySelector('#all');

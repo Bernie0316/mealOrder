@@ -16,13 +16,13 @@
         {
             "name": "巨城餐廳",
             "qrcode": null,
-            "url": null,
+            "url": "try.com",
             "baihuo": "巨城"
         },
         {
             "name": "其他餐廳",
             "qrcode": null,
-            "url": null,
+            "url": "try.com",
             "baihuo": "其他"
         }
     ]

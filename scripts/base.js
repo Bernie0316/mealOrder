@@ -5,7 +5,7 @@ const all = document.querySelector('#all');
 const yuanBai = document.querySelector('#yuanBai');
 const juCheng = document.querySelector('#juCheng');
 const xiangPingFang = document.querySelector('#xiangPingFang');
-const other = document.querySelector('#other');
+const other = document.querySelector('#others');
 
 async function getRestaurantData(filter = "all") {
     const response = await fetch(url);
@@ -68,27 +68,27 @@ getRestaurantData();
 all.addEventListener('click', () => {
     clearButtonClasses();
     getRestaurantData('all');
-    utah.classList.add('active');
+    all.classList.add('active');
 })
 yuanBai.addEventListener('click', () =>{
     clearButtonClasses();
     getRestaurantData('yuanBai');
-    nonus.classList.add('active');
+    yuanBai.classList.add('active');
 })
 juCheng.addEventListener('click', () =>{
     clearButtonClasses();
     getRestaurantData('juCheng');
-    nonus.classList.add('active');
+    juCheng.classList.add('active');
 })
 xiangPingFang.addEventListener('click', () =>{
     clearButtonClasses();
     getRestaurantData('xiangPingFang');
-    nonus.classList.add('active');
+    xiangPingFang.classList.add('active');
 })
 other.addEventListener('click', () =>{
     clearButtonClasses();
     getRestaurantData('other');
-    nonus.classList.add('active');
+    other.classList.add('active');
 })
 
 function clearButtonClasses() {

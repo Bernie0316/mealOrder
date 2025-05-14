@@ -3,7 +3,7 @@
     [
         {
             "name": "Momo Paradise",
-            "qrcode": "/images/restaurantQrcode/momoParadise.heic",
+            "qrcode": "https://bernie0316.github.io/mealOrder/images/restaurantQrcode/momoParadise.heic",
             "url": "try.com",
             "baihuo": "遠百"
         },
